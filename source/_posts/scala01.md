@@ -7,6 +7,8 @@ tags: scala
 var 可变变量  
 val 不可变变量  
 
+<!--more-->
+
 Scala里变量类型是可以自动推导的  
 val a = 10  
 val b = 20  
@@ -15,19 +17,18 @@ val d = new User()
 
 Scala的基本数据类型  
 Byte Char Short Int Long Float Double Boolean .....
-<!--more-->
 
 asInstanceOf 类型转换  
-```
+```shell
 scala> val a:Int = 10
 a: Int = 10
 
 scala> a.asInstanceOf[Double]
 res7: Double = 10.0
-``` 
+```
 
 isInstanceOf 判断类型
-```
+```shell
 scala> val a:Double = 10d
 a: Double = 10.0
 
@@ -36,7 +37,7 @@ res8: Boolean = false
 ```
 
 ## 定义函数、方法
-```
+```scala
    def max(x: Int, y: Int): Int = {
     if (x > y) {
       x
@@ -54,14 +55,15 @@ max：定义函数的名称，通俗见名知意的
 ## 循环
 1到10  
 Range.Inclusive,闭区间的，有头有尾
-```
+```shell
 scala> 1 to 10
 res9: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 ```
 
 Range(起始位，结束位，步长)  
 until：跟步长为1的Range是一个意思  
-```
+
+```shell
 scala> Range(1,10)
 res10: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
@@ -81,7 +83,7 @@ scala> 1 until 10
 res15: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
 ```
 for循环输出
-```
+```scala
 for (i <- Range(1,10,1)){
       println(i)
 }
@@ -94,7 +96,7 @@ for (i <- Range(1,10,1) if(i%2 == 0)){
 ## 对象
 _:表示占位符，初始化可变变量使用，使用占位符必须定义变量类型  
 private[this]：设置访问修饰符，this代表只能在类的内部使用
-```
+```scala
 class SparkConf {
   private[this] var master: String = _
   private[this] var appName: String = ""
@@ -115,7 +117,7 @@ class SparkConf {
 }
 ```
 Spark 源码版
-```
+```scala
 package com.huangzh.bigdata.scala01
 
 import java.util.concurrent.ConcurrentHashMap
@@ -153,7 +155,7 @@ class SparkConf {
 ## 构造函数
 主构造函数跟在Class的类名后面，入参的变量会在类中自动定义对象属性
 附属构造函数的第一行必须调用主构造函数或其他附属构造函数
-```
+```scala
 package com.huangzh.bigdata.scala01
 
 object SparkConfApp {
@@ -180,8 +182,6 @@ class SparkConf(master: String, appName: String) {
 }
 
 ```
-
-
 
 
 

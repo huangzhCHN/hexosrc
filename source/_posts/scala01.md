@@ -1,23 +1,23 @@
 ---
-title: ScalaµÚÒ»½²£¨±äÁ¿£¬º¯Êý£¬Ñ­»·£¬ÀàµÄ¶¨Òå£¬¹¹Ôìº¯Êý£©
+title: Scalaç¬¬ä¸€è®²ï¼ˆå˜é‡ï¼Œå‡½æ•°ï¼Œå¾ªçŽ¯ï¼Œç±»çš„å®šä¹‰ï¼Œæž„é€ å‡½æ•°ï¼‰
 date: 2019-07-06 23:33:09
 tags: scala
 ---
-## ¶¨Òå±äÁ¿
-var ¿É±ä±äÁ¿  
-val ²»¿É±ä±äÁ¿  
+## å®šä¹‰å˜é‡
+var å¯å˜å˜é‡  
+val ä¸å¯å˜å˜é‡  
 
-ScalaÀï±äÁ¿ÀàÐÍÊÇ¿ÉÒÔ×Ô¶¯ÍÆµ¼µÄ  
+Scalaé‡Œå˜é‡ç±»åž‹æ˜¯å¯ä»¥è‡ªåŠ¨æŽ¨å¯¼çš„  
 val a = 10  
 val b = 20  
 val c = "aaa"  
 val d = new User()  
 
-ScalaµÄ»ù±¾Êý¾ÝÀàÐÍ  
+Scalaçš„åŸºæœ¬æ•°æ®ç±»åž‹  
 Byte Char Short Int Long Float Double Boolean .....
 <!--more-->
 
-asInstanceOf ÀàÐÍ×ª»»  
+asInstanceOf ç±»åž‹è½¬æ¢  
 ```
 scala> val a:Int = 10
 a: Int = 10
@@ -26,7 +26,7 @@ scala> a.asInstanceOf[Double]
 res7: Double = 10.0
 ``` 
 
-isInstanceOf ÅÐ¶ÏÀàÐÍ
+isInstanceOf åˆ¤æ–­ç±»åž‹
 ```
 scala> val a:Double = 10d
 a: Double = 10.0
@@ -35,7 +35,7 @@ scala> a.isInstanceOf[Int]
 res8: Boolean = false
 ```
 
-## ¶¨Òåº¯Êý¡¢·½·¨
+## å®šä¹‰å‡½æ•°ã€æ–¹æ³•
 ```
    def max(x: Int, y: Int): Int = {
     if (x > y) {
@@ -45,22 +45,22 @@ res8: Boolean = false
     }
   }
 ```
-def£º¶¨Òåº¯ÊýµÄ¹Ø¼ü×Ö  
-max£º¶¨Òåº¯ÊýµÄÃû³Æ£¬Í¨Ë×¼ûÃûÖªÒâµÄ  
-(x: Int, y: Int)£ºº¯ÊýµÄÈë²Î¿ÉÒÔÃ»ÓÐ£¬¶à¸öÈë²ÎÖ®¼äÓÃ¶ººÅ·Ö¸ô£¬Ã¿¸ö²ÎÊý¶¨Òå£¨²ÎÊýÃû³Æ£º²ÎÊýÀàÐÍ£©  
-:Int£ºº¯Êý·µ»ØÖµÀàÐÍ£¬¿É¼òÐ´Scala×Ô¶¯ÍÆµ¼£¬ÎÞ·µ»ØÖµÎª:Unit  
-{...}£º´óÀ¨ºÅÖ®¼äµÄÎª·½·¨Ìå£¬·½·¨ÌåµÄ×îºóÒ»ÐÐ´úÂëÎª·µ»ØÖµ
+defï¼šå®šä¹‰å‡½æ•°çš„å…³é”®å­—  
+maxï¼šå®šä¹‰å‡½æ•°çš„åç§°ï¼Œé€šä¿—è§åçŸ¥æ„çš„  
+(x: Int, y: Int)ï¼šå‡½æ•°çš„å…¥å‚å¯ä»¥æ²¡æœ‰ï¼Œå¤šä¸ªå…¥å‚ä¹‹é—´ç”¨é€—å·åˆ†éš”ï¼Œæ¯ä¸ªå‚æ•°å®šä¹‰ï¼ˆå‚æ•°åç§°ï¼šå‚æ•°ç±»åž‹ï¼‰  
+:Intï¼šå‡½æ•°è¿”å›žå€¼ç±»åž‹ï¼Œå¯ç®€å†™Scalaè‡ªåŠ¨æŽ¨å¯¼ï¼Œæ— è¿”å›žå€¼ä¸º:Unit  
+{...}ï¼šå¤§æ‹¬å·ä¹‹é—´çš„ä¸ºæ–¹æ³•ä½“ï¼Œæ–¹æ³•ä½“çš„æœ€åŽä¸€è¡Œä»£ç ä¸ºè¿”å›žå€¼
 
-## Ñ­»·
-1µ½10  
-Range.Inclusive,±ÕÇø¼äµÄ£¬ÓÐÍ·ÓÐÎ²
+## å¾ªçŽ¯
+1åˆ°10  
+Range.Inclusive,é—­åŒºé—´çš„ï¼Œæœ‰å¤´æœ‰å°¾
 ```
 scala> 1 to 10
 res9: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 ```
 
-Range(ÆðÊ¼Î»£¬½áÊøÎ»£¬²½³¤)  
-until£º¸ú²½³¤Îª1µÄRangeÊÇÒ»¸öÒâË¼  
+Range(èµ·å§‹ä½ï¼Œç»“æŸä½ï¼Œæ­¥é•¿)  
+untilï¼šè·Ÿæ­¥é•¿ä¸º1çš„Rangeæ˜¯ä¸€ä¸ªæ„æ€  
 ```
 scala> Range(1,10)
 res10: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -80,20 +80,20 @@ java.lang.IllegalArgumentException: step cannot be 0.
 scala> 1 until 10
 res15: scala.collection.immutable.Range = Range(1, 2, 3, 4, 5, 6, 7, 8, 9)
 ```
-forÑ­»·Êä³ö
+forå¾ªçŽ¯è¾“å‡º
 ```
 for (i <- Range(1,10,1)){
       println(i)
 }
 
-//Êä³ö1-10Ö®¼äµÄÅ¼Êý
+//è¾“å‡º1-10ä¹‹é—´çš„å¶æ•°
 for (i <- Range(1,10,1) if(i%2 == 0)){
       println(i)
 }
 ```
-## ¶ÔÏó
-_:±íÊ¾Õ¼Î»·û£¬³õÊ¼»¯¿É±ä±äÁ¿Ê¹ÓÃ£¬Ê¹ÓÃÕ¼Î»·û±ØÐë¶¨Òå±äÁ¿ÀàÐÍ  
-private[this]£ºÉèÖÃ·ÃÎÊÐÞÊÎ·û£¬this´ú±íÖ»ÄÜÔÚÀàµÄÄÚ²¿Ê¹ÓÃ
+## å¯¹è±¡
+_:è¡¨ç¤ºå ä½ç¬¦ï¼Œåˆå§‹åŒ–å¯å˜å˜é‡ä½¿ç”¨ï¼Œä½¿ç”¨å ä½ç¬¦å¿…é¡»å®šä¹‰å˜é‡ç±»åž‹  
+private[this]ï¼šè®¾ç½®è®¿é—®ä¿®é¥°ç¬¦ï¼Œthisä»£è¡¨åªèƒ½åœ¨ç±»çš„å†…éƒ¨ä½¿ç”¨
 ```
 class SparkConf {
   private[this] var master: String = _
@@ -114,7 +114,7 @@ class SparkConf {
   }
 }
 ```
-Spark Ô´Âë°æ
+Spark æºç ç‰ˆ
 ```
 package com.huangzh.bigdata.scala01
 
@@ -150,9 +150,9 @@ class SparkConf {
 
 ```
 
-## ¹¹Ôìº¯Êý
-Ö÷¹¹Ôìº¯Êý¸úÔÚClassµÄÀàÃûºóÃæ£¬Èë²ÎµÄ±äÁ¿»áÔÚÀàÖÐ×Ô¶¯¶¨Òå¶ÔÏóÊôÐÔ
-¸½Êô¹¹Ôìº¯ÊýµÄµÚÒ»ÐÐ±ØÐëµ÷ÓÃÖ÷¹¹Ôìº¯Êý»òÆäËû¸½Êô¹¹Ôìº¯Êý
+## æž„é€ å‡½æ•°
+ä¸»æž„é€ å‡½æ•°è·Ÿåœ¨Classçš„ç±»ååŽé¢ï¼Œå…¥å‚çš„å˜é‡ä¼šåœ¨ç±»ä¸­è‡ªåŠ¨å®šä¹‰å¯¹è±¡å±žæ€§
+é™„å±žæž„é€ å‡½æ•°çš„ç¬¬ä¸€è¡Œå¿…é¡»è°ƒç”¨ä¸»æž„é€ å‡½æ•°æˆ–å…¶ä»–é™„å±žæž„é€ å‡½æ•°
 ```
 package com.huangzh.bigdata.scala01
 
@@ -168,7 +168,7 @@ object SparkConfApp {
 
 class SparkConf(master: String, appName: String) {
   var extra: String = _
-  //¸½Êô¹¹Ôìº¯Êý
+  //é™„å±žæž„é€ å‡½æ•°
   def this(master: String, appName: String, extra: String) {
     this(master, appName)
     this.extra = extra

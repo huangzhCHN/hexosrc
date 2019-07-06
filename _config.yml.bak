@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Huangzh的个人博客|Over.
+title: Huangzh鐨勪釜浜哄崥瀹Over.
 subtitle:
 description:
 keywords:
 author: John Huang
-language:
+language: zh_CN
 timezone:
 
 # URL
@@ -81,3 +81,22 @@ deploy:
   type: git
   repository: git@github.com:huangzhCHN/huangzhCHN.github.io.git
   branch: master
+
+ jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true

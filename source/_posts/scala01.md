@@ -7,6 +7,10 @@ tags: scala
 var 可变变量  
 val 不可变变量  
 
+
+
+<!--more-->
+
 Scala里变量类型是可以自动推导的  
 val a = 10  
 val b = 20  
